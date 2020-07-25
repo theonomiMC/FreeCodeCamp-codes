@@ -1,0 +1,10 @@
+function translatePigLatin(str){
+//match charackter starting with consonent(s);
+var regex = str.match(/^[^aeiou]+/g);
+if(regex){
+return str.replace(/^[^aeiou]+/g, '') + regex + 'ay';
+}else{
+return str + 'way';
+}
+}
+translatePigLatin('glove');
