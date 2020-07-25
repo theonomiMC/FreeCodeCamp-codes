@@ -1,0 +1,17 @@
+function pairElement(str) {
+  let pair=[];
+  for(let letter of str){
+    let temp=[letter, 0]
+    if(letter==='A'){
+      temp[1]='T';
+    }
+    if(letter==='G'){ temp[1]='C';  }
+    if(letter==='T'){ temp[1]='A';  }
+    if(letter==='C'){ temp[1]='G';  }
+    pair.push(temp);
+    
+   }
+  return pair;
+}
+
+pairElement("TTGAG");
